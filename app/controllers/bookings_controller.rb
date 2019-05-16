@@ -1,16 +1,20 @@
 class BookingsController < ApplicationController
-
   before_action :set_booking, only: [:show, :destroy]
 
   def show
+    @user = current_user
   end
 
   def new
     @booking = Booking.new
+    @dog = Dog.find(params[:dog_id])
   end
 
   def create
+    @dog = Dog.find(params[:dog_id])
     @booking = Booking.new(booking_params)
+    @booking.dog = @dog
+    @booking.user = current_user
     if @booking.save
       redirect_to booking_path(@booking)
     else
@@ -20,9 +24,9 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking = Booking.find(params[:user_id])
-    @booking.user = @user
+    @booking.user = current_user
     @booking.destroy
-    redirect_to user_path(@user)
+    redirect_to user_path(current_user)
   end
 
   private
@@ -32,8 +36,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :comment, :user_id, :dog_id)
+    params.require(:booking).permit(:start_date, :end_date, :comment)
   end
-end
-
 end
