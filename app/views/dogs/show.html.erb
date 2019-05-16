@@ -1,1 +1,8 @@
-<h1>Dog</h1>
+<h1>Details about <%= @dog.name %></h1>
+<p><%= @dog.breed %></p>
+<p><%= @dog.description %></p>
+<p><%= @dog.rate %></p>
+<p><%= @dog.age %></p>
+
+<%= link_to "Delete", dogs_path, method: :delete %>
+
