@@ -1,0 +1,28 @@
+body {
+  background-image:url('https://images.pexels.com/photos/262713/pexels-photo-262713.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.form-booking-container {
+  width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 100px;
+}
+
+.form-booking-input {
+  width: 300px;
+}
+
+.form-booking-image {
+  height: 250px;
+  width: 350px;
+}
+
+
+.box {
+  background-color: white;
+  border-radius: 5px;
+}

@@ -1,8 +1,14 @@
-.card-dog {
+.card-dog .card-booking {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+
+.card-booking {
+  padding: 16px;
+  align-items: center;
+}
+
 
 .card-dog > img {
   height: 200px;
