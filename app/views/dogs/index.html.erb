@@ -1,19 +1,38 @@
-<h1>Dogs</h1>
+<div class="dog-index", style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/dog-index-background.jpg')">
 
-<% @dogs.each do |dog| %>
-  <%= cl_image_tag dog.photo, height:150, width: 200, crop: :fill %>
-  <%= dog.name %>
-  <% if policy(dog).edit? %>
-    <%= link_to "Update", edit_dog_path(dog) %>
+  <div class="container">
+
+    <h1 class="p-3">Find a friend</h1>
+    <div class="cards">
+      <% @dogs.each do |dog| %>
+        <div class="card-dog">
+          <%= link_to dog_path(dog), class:"dog-card-link" do %>
+            <div class="photo-dog" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path(dog.photo.url) %>')">
+            </div>
+            <div class="card-dog-infos">
+              <div >
+                <h2><%= dog.name %></h2>
+                <p><%= dog.description %></p>
+              </div>
+
+              <h2 class="card-dog-pricing"><%= dog.rate %>£</h2>
+            </div>
+    <!--     <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-dog-user avatar-bordered"/>
+     -->
+            <% if policy(dog).edit? %>
+             <%= link_to "Update", edit_dog_path(dog) %>
+            <% end %>
+            <% if policy(dog).destroy? %>
+               <%= link_to "Delete", dog_path(dog), method: :delete %>
+             <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+
+  <% if policy(Dog).create? %>
+    <%= link_to "New dog", new_dog_path %>
   <% end %>
-  <% if policy(dog).destroy? %>
-    <%= link_to "Delete", dog_path(dog), method: :delete %>
-  <% end %>
-<% end %>
-
-
-<% if policy(Dog).create? %>
-  <%= link_to "New dog", new_dog_path %>
-<% end %>
-
-
+</div>
