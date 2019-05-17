@@ -1,5 +1,19 @@
 <h1>Dogs</h1>
 
 <% @dogs.each do |dog| %>
+  <%= cl_image_tag dog.photo, height:150, width: 200, crop: :fill %>
   <%= dog.name %>
+  <% if policy(dog).edit? %>
+    <%= link_to "Update", edit_dog_path(dog) %>
+  <% end %>
+  <% if policy(dog).destroy? %>
+    <%= link_to "Delete", dog_path(dog), method: :delete %>
+  <% end %>
 <% end %>
+
+
+<% if policy(Dog).create? %>
+  <%= link_to "New dog", new_dog_path %>
+<% end %>
+
+
