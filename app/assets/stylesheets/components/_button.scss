@@ -3,23 +3,19 @@
   background-color: #FF751A;
   font-weight: bold;
   border-radius: 10px;
-  text-align: none;
   padding: 0px 16px;
   opacity: 0.8;
-  text-align: center;
   width: 200px;
   margin: 16px;
-
-  a {
-    color: white;
-    text-align: center;
-    text-decoration: none;
-  }
-
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 1rem;
 
 }
 
 .btn-treehouse:hover{
   background-color: #f9ae2c;
+  text-decoration: none !important;
   transition: .4s;
 }
