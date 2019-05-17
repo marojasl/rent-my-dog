@@ -7,6 +7,16 @@
   align-items: center;
   margin: 16px;
   border-radius: 3px;
+
+  animation-duration: 3s;
+}
+
+.move-right {
+  animation-name: moveInRight;
+}
+
+.move-left {
+  animation-name: moveInLeft;
 }
 
 .card-product img {
@@ -31,4 +41,47 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+
+
+
+  }
+
+
+}
+
+@keyframes moveInRight{
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+
+
+
+  }
+
+
 }
