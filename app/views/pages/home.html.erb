@@ -3,7 +3,10 @@
     <h1>Share<strong> the love</strong> of<strong> Dogs</strong>!</h1>
     <p>Connecting dog owners with local dog borrowers for walks, weekends and holidays</p>
     <br>
-      <div class="d-flex justify-content-center mx-3 mt-3">
+    <% if user_signed_in? %>
+      <div></div>
+    <% else %>
+      <div class="d-flex justify-content-center mx-3">
           <%= link_to new_user_session_path, class:"link-text" do %>
             <div class="btn-treehouse"> Get started as an owner </div>
           <% end %>
@@ -11,8 +14,10 @@
           <%= link_to new_user_session_path, class:"link-text" do %>
             <div class="btn-treehouse">
               Get started as an borrower
-             </div>
+            </div>
           <% end %>
+    <% end %>
+
       </div>
   </div>
 </div>
@@ -20,13 +25,13 @@
 
 <div class="container text-center">
   <div class="center-part">
-    <h2><strong>Our testimonies</strong></h2>
+    <h2><strong>Our stories</strong></h2>
 
     <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+      <img src="https://images.unsplash.com/photo-1535812859-6bfd2f132e78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60">
       <div class="card-product-infos">
         <h2>Product name</h2>
-        <p>Product description with <strong>relevant info</strong> only.</p>
+        <p>" Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur eosonly.</p>
       </div>
     </div>
 
@@ -34,7 +39,7 @@
       <img src="https://images.pexels.com/photos/1111028/pexels-photo-1111028.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
       <div class="card-product-infos">
         <h2>Product name</h2>
-        <p>Product description with <strong>relevant info</strong> only.</p>
+        <p> "Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur only"</p>
       </div>
     </div>
 
@@ -42,7 +47,7 @@
       <img src="https://images.pexels.com/photos/341378/pexels-photo-341378.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
       <div class="card-product-infos">
         <h2>Product name</h2>
-        <p>Product description with <strong>relevant info</strong> only.</p>
+        <p>"Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur only.</p>
       </div>
     </div>
   </div>
@@ -50,6 +55,7 @@
 
 <div class="orange-font">
   <div class="container text-center">
+    <br>
     <h3>Why use our service</h3>
       <div class="row mt-3">
         <div class="col">
