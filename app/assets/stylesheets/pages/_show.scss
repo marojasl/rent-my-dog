@@ -1,0 +1,39 @@
+.show-dog {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr;
+  grid-gap: 16px;
+  // grid-template-areas:
+  //   ""
+}
+
+.dog-image {
+  grid-column: 1/2;
+  grid-row: 1/4;
+  // text-align: center;
+  width: 100%;
+  max-height: 100%;
+}
+
+.title {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  text-align: center;
+
+}
+
+.dog-info {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  // text-align: center;
+
+}
+
+.links {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  text-align: center;
+
+}
