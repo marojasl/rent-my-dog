@@ -19,6 +19,9 @@
     <% if policy(@dog).destroy? %>
       <p><%= link_to "Delete", dog_path(@dog), method: :delete %><p>
     <% end %>
-    <p><%= link_to "Back to all dogs", dogs_path %><p>
+
+    <%= link_to "Back to all dogs", dogs_path %>
+    <br>
+    <%= link_to "Book!", new_dog_booking_path(@dog) %>
   </div>
 </div>
