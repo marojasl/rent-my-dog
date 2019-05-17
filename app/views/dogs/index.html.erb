@@ -19,12 +19,20 @@
             </div>
     <!--     <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-dog-user avatar-bordered"/>
      -->
-
+            <% if policy(dog).edit? %>
+             <%= link_to "Update", edit_dog_path(dog) %>
+            <% end %>
+            <% if policy(dog).destroy? %>
+               <%= link_to "Delete", dog_path(dog), method: :delete %>
+             <% end %>
           <% end %>
         </div>
       <% end %>
     </div>
   </div>
 
-  <%= link_to "New dog", new_dog_path %>
+
+  <% if policy(Dog).create? %>
+    <%= link_to "New dog", new_dog_path %>
+  <% end %>
 </div>
