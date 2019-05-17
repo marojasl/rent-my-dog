@@ -1,30 +1,30 @@
-<div class="dog-index">
+<div class="dog-index", style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/dog-index-background.jpg')">
 
-<div class="container">
+  <div class="container">
 
-  <h1 class="p-3">Find a friend</h1>
-  <div class="cards">
-    <% @dogs.each do |dog| %>
-      <div class="card-dog">
-        <%= link_to dog_path(dog), class:"dog-card-link" do %>
-          <div class="photo-dog" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path(dog.photo.url) %>')">
-          </div>
-          <div class="card-dog-infos">
-            <div >
-              <h2><%= dog.name %></h2>
-              <p><%= dog.description %></p>
+    <h1 class="p-3">Find a friend</h1>
+    <div class="cards">
+      <% @dogs.each do |dog| %>
+        <div class="card-dog">
+          <%= link_to dog_path(dog), class:"dog-card-link" do %>
+            <div class="photo-dog" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path(dog.photo.url) %>')">
             </div>
+            <div class="card-dog-infos">
+              <div >
+                <h2><%= dog.name %></h2>
+                <p><%= dog.description %></p>
+              </div>
 
-            <h2 class="card-dog-pricing"><%= dog.rate %>£</h2>
-          </div>
-  <!--     <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-dog-user avatar-bordered"/>
-   -->
+              <h2 class="card-dog-pricing"><%= dog.rate %>£</h2>
+            </div>
+    <!--     <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-dog-user avatar-bordered"/>
+     -->
 
-        <% end %>
-      </div>
-    <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
-</div>
 
-<%= link_to "New dog", new_dog_path %>
+  <%= link_to "New dog", new_dog_path %>
 </div>
