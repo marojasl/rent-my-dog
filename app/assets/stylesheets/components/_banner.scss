@@ -23,6 +23,11 @@
   animation-duration: 3s;
 }
 
+.link-text:hover {
+
+  text-decoration: none;
+}
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -64,4 +69,18 @@
   }
 
 
+}
+
+
+@media only screen and (height:90px) {
+   /* 90 pixels high */
+   .banner {
+      height:90px;
+   }
+}
+@media only screen and (height:125px) {
+   /* 125 pixels high */
+   .banner {
+      height:125px;
+   }
 }
