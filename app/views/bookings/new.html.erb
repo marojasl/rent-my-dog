@@ -4,11 +4,14 @@
 </div> -->
 
 <div class="booking-background">
+
+</div>
+
+<!-- "d-flex flex-center justify-content-center" -->
+<div class="form-flex">
   <div class="card-category">
     <div class="form-booking-container box" >
-      <h1 class='title py-4'>Booking with <span class='text-primary'><%= @dog.name %></span>
-       </h1>
-
+      <h1 class='title py-4'>Booking with <span class='text-primary'><%= @dog.name %></span></h1>
       <div class="d-flex justify-content-around">
         <%= cl_image_tag @dog.photo, crop: :fill, class:"form-booking-image" %>
         <div class="form-booking-input">
@@ -20,9 +23,7 @@
         <%= link_to 'Cancel', dog_path(@dog) %>
       </div>
     </div>
-
-    </div>
-
   </div>
-
 </div>
+
+
