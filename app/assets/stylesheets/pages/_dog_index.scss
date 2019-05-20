@@ -44,6 +44,8 @@
   }
 }
 
+
+
 .name-dog {
   font-size: 25px;
 }
@@ -53,12 +55,18 @@
   .cards {
     grid-template-columns: 1fr;
   }
+  .mapboxgl-popup-content {
+    width: 100px;
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .cards {
     grid-template-columns: 1fr;
+  }
+  .mapboxgl-popup-content {
+    width: 200px;
   }
 }
 
