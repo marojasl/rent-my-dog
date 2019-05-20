@@ -22,11 +22,11 @@
         <li class="nav-item active">
           <% if policy(Dog).create? %>
             <%= link_to new_dog_path, class:"nav-link" do %>
-              <p><i class="fas fa-plus"></i> Add your dog</p>
+              <p class= "add-dog"><i class="fas fa-plus"></i> Add your dog</p>
             <% end %>
           <% end %>
         </li>
-        <li class="nav-item">
+        <li class="nav-item add-dog">
           <%= link_to "Messages", "#", class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
