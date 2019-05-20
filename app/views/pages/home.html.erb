@@ -3,7 +3,16 @@
     <h1>Share<strong> the love</strong> of<strong> Dogs</strong>!</h1>
     <p>Connecting dog owners with local dog borrowers for walks, weekends and holidays</p>
     <br>
-    <% unless user_signed_in? %>
+    <% if user_signed_in? %>
+      <div>
+        <div class="button-owner">
+          <%= link_to dogs_path, class:"link-text" do %>
+          <div class="btn-treehouse"> See our adorable dogs!</div>
+         <% end %>
+       </div>
+      </div>
+
+    <% else %>
       <div class="d-flex justify-content-center mx-3">
 
        <div class="button-owner">
