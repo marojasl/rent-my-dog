@@ -15,12 +15,21 @@
 
   <div class="links">
     <% if policy(@dog).edit? %>
-      <p><%= link_to "Update", edit_dog_path(@dog), class:"btn btn-ouline-warning"%></p>
+      <%= link_to edit_dog_path(@dog), class:"link-text" do %>
+      <div class="btn-treehouse"> Update</div>
+      <% end %>
     <% end %>
     <% if policy(@dog).destroy? %>
-      <p><%= link_to "Delete", dog_path(@dog), method: :delete %><p>
+      <%= link_to dog_path(@dog),  method: :delete, class:"link-text" do %>
+        <div class="btn-treehouse"> Delete</div>
+      <% end %>
     <% end %>
-    <%= link_to "Back to all dogs", dogs_path %>
-    <%= link_to "Book me", new_dog_booking_path(@dog) %>
+    <%= link_to new_dog_booking_path(@dog), class:"link-text" do %>
+      <div class="btn-treehouse"> Book me</div>
+    <% end %>
+    <%= link_to dogs_path, class:"link-text" do %>
+      <div class="btn-treehouse"> Back to all dogs</div>
+    <% end %>
   </div>
 </div>
+
