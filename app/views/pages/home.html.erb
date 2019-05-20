@@ -5,21 +5,27 @@
     <br>
     <% unless user_signed_in? %>
       <div class="d-flex justify-content-center mx-3">
-          <%= link_to new_user_session_path, class:"link-text" do %>
-            <div class="btn-treehouse"> Get started as an owner </div>
-          <% end %>
 
+       <div class="button-owner">
+        <%= link_to new_user_session_path, class:"link-text" do %>
+           <div class="btn-treehouse"> Get started as an owner </div>
+         <% end %>
+       </div>
+
+        <div class="button-user">
           <%= link_to new_user_session_path, class:"link-text" do %>
             <div class="btn-treehouse">
               Get started as an borrower
             </div>
           <% end %>
+        </div>
       </div>
     <% end %>
   </div>
 </div>
- <div class="cards-container">
+ <div class="dog-prints">
   <!-- <div class="container text-center"> -->
+
     <div class="card-center-part">
         <h2 class="text-center"><strong>Our stories</strong></h2>
 
@@ -32,22 +38,44 @@
         </div>
       </div>
 
-      <div class="card-product move-left">
-        <img src="https://images.pexels.com/photos/1111028/pexels-photo-1111028.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
-        <div class="card-product-infos">
-          <h2>Product name</h2>
-          <p> "Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur only"</p>
+
+   <div class="stories-body">
+
+      <div class="center-part">
+         <h2 class="text-center"><strong>Our stories</strong></h2>
+
+       <div class="card-story">
+         <div class="card-product move-right">
+           <img src="https://images.unsplash.com/photo-1535812859-6bfd2f132e78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60">
+           <div class="card-product-infos">
+             <h2>Product name</h2>
+             <p>" Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur eosonly.</p>
+           </div>
+         </div>
+       </div>
+
+      <div class="card-story">
+          <div class="card-product move-left">
+          <img src="https://images.pexels.com/photos/1111028/pexels-photo-1111028.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+          <div class="card-product-infos">
+            <h2>Product name</h2>
+            <p> "Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur only"</p>
+          </div>
         </div>
       </div>
 
-      <div class="card-product move-right">
-        <img src="https://images.pexels.com/photos/341378/pexels-photo-341378.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
-        <div class="card-product-infos">
-          <h2>Product name</h2>
-          <p>"Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur only.</p>
+      <div class="card-story">
+         <div class="card-product move-right">
+          <img src="https://images.pexels.com/photos/341378/pexels-photo-341378.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+          <div class="card-product-infos">
+            <h2>Product name</h2>
+            <p>"Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur only.</p>
+          </div>
         </div>
       </div>
-    </div>
+
+   </div>
+  </div>
   <!-- </div> -->
 
   <div class="square-container">
