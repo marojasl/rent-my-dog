@@ -15,7 +15,9 @@ class DogsController < ApplicationController
     @markers = @dogs.map do |dog|
       {
         lat: dog.latitude,
-        lng: dog.longitude
+        lng: dog.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { dog: dog }),
+        image_url: helpers.asset_url('map-pin.png')
       }
     end
   end
