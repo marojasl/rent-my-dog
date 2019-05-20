@@ -5,6 +5,19 @@ class DogsController < ApplicationController
 
   def index
     @dogs = policy_scope(Dog)
+
+    if params[:postcode].present?
+      @dogs = Dog.near(params[:postcode], 10)
+    else
+      @dogs = Dog.where.not(latitude: nil, longitude: nil)
+    end
+
+    @markers = @dogs.map do |dog|
+      {
+        lat: dog.latitude,
+        lng: dog.longitude
+      }
+    end
   end
 
   def show
@@ -50,6 +63,6 @@ class DogsController < ApplicationController
   end
 
   def dog_params
-    params.require(:dog).permit(:photo, :name, :breed, :description, :rate, :age)
+    params.require(:dog).permit(:photo, :name, :breed, :description, :rate, :age, :address)
   end
 end
