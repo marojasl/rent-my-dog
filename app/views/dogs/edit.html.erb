@@ -1,3 +1,9 @@
-<h1>Edit the info of <%= @dog.name %></h1>
+<h1 style="color: #FF7010;" class="text-center">Edit the info of <%= @dog.name %></h1>
 <%= render 'form', dog: @dog %>
-<%= link_to 'Cancel', dog_path(@dog) %>
+
+
+
+  <%= link_to dogs_path(@dog), class:"link-text" do %>
+  <div class="btn-treehouse"> Cancel</div>
+  <% end %>
+
