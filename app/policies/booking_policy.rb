@@ -22,7 +22,7 @@ class BookingPolicy < ApplicationPolicy
   end
 
   def user_owner?
-    record.user == user
+    record.user == user || record.dog.user
   end
 end
 
