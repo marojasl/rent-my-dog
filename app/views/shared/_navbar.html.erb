@@ -1,7 +1,19 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to dogs_path, class: "navbar-brand" do %>
-    <%= image_tag "https://cdn4.iconfinder.com/data/icons/flat-pet-icons/344/pet14-512.png" %>
+
+ <div class="d-flex align-items-start main-brand">
+
+    <span class= "navbar-link">
+    <%= link_to dogs_path do %>
+       <%= image_tag "https://image.flaticon.com/icons/svg/620/620851.svg", id: "logo-navbar" %>
     <% end %>
+    </span>
+
+
+   <span id="navbar-brand">
+    <h2> Rent My Dog</h2>
+   </span>
+
+  </div>
 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">

@@ -2,20 +2,38 @@
   font-family: Raleway, Helvetica, sans-serif;
   background-color: #FF751A;
   font-weight: bold;
-  border-radius: 10px;
-  padding: 0px 16px;
-  opacity: 0.8;
+  border-radius: 20px;
+  padding: 16px 16px;
+  opacity: 0.65;
   width: 200px;
   margin: 16px;
   color: white;
   text-align: center;
   text-decoration: none;
+  font-size: 16px;
   margin-top: 1rem;
+  position: relative;
 
 }
 
 .btn-treehouse:hover{
   background-color: #f9ae2c;
   text-decoration: none !important;
-  transition: .4s;
+  transition: .2s;
+  transform: translateY(3px);
+  box-shadow: 2px 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-treehouse:active{
+  transform: translateY(2px);
+  box-shadow: 1px 5px 10px rgba(0,0,0,0.2);
+}
+
+.button-owner{
+  position: absolute;
+  left: 375px;
+}
+
+.button-user{
+  margin-left: 475px;
 }
