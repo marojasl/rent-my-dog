@@ -13,6 +13,13 @@
     </div>
   </div>
 
+  <br>
+  <%= simple_form_for(@chatroom) do |f| %>
+    <%= hidden_field_tag :receiver_id, @dog.user.id %>
+    <%= f.submit "Chat with #{@dog.user.first_name}" %>
+  <% end %>
+  <br>
+
   <div class="links">
     <% if policy(@dog).edit? %>
       <%= link_to edit_dog_path(@dog), class:"link-text" do %>
