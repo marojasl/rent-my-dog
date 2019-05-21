@@ -13,4 +13,11 @@ class Dog < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
+
+  include PgSearch
+  pg_search_scope :search_rate_range,
+    against: [ :rate ],
+    using: {
+      tsearch: { prefix: true }
+    }
 end
