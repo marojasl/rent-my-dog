@@ -6,7 +6,7 @@
     <div class="d-flex justify-content-around">
       <%= cl_image_tag @dog.photo, crop: :fill, class:"form-booking-image" %>
       <div class="form-booking-input">
-        <%= render 'form', booking: @booking %>
+        <%= render 'form', booking: @booking, dog: @dog, dates: @dates.to_json %>
       </div>
     </div>
 
