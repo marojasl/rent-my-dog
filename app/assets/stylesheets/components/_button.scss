@@ -1,18 +1,19 @@
 .btn-treehouse {
-  font-family: Raleway, Helvetica, sans-serif;
+  font-family: Fredoka One, Helvetica, sans-serif;
   background-color: #FF751A;
   font-weight: bold;
-  border-radius: 20px;
-  padding: 16px 16px;
+  border-radius: 10px;
+  padding: 14px 10px;
   opacity: 0.65;
-  width: 200px;
-  margin: 16px;
+  width: 350px;
+  margin: 16px 60px;
   color: white;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   margin-top: 1rem;
   position: relative;
+  letter-spacing: 4px;
 
 }
 
@@ -29,11 +30,23 @@
   box-shadow: 1px 5px 10px rgba(0,0,0,0.2);
 }
 
-.button-owner{
-  position: absolute;
-  left: 375px;
+.btn-signin{
+  margin-top: 25px;
+
 }
 
-.button-user{
-  margin-left: 475px;
+.btn-orange-border {
+  font-family: Raleway, Helvetica, sans-serif;
+  border: 0.5mm solid #FF751A ;
+  font-weight: lighter;
+  border-radius: 18px;
+  text-align: none;
+  padding: 16px 20px;
+  transition: .2s;
+  color: #FF751A;
+}
+
+.btn-orange-border:hover {
+  color: #f9ae2c;
+  border: 0.5mm solid #f9ae2c;
 }
