@@ -1,24 +1,19 @@
-<!--
-<div class="booking-container" >
- <div class="test" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.pexels.com/photos/262713/pexels-photo-262713.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
-</div> -->
 
-<div class="booking-background d-flex" style="min-height: calc(100vh - 163.97px);">
-  <div class="card-category">
-    <div class="form-booking-container box">
-      <h1 class='title py-4'>Booking with <span class='text-primary'><%= @dog.name %></span></h1>
-      <div class="d-flex justify-content-around">
-        <%= cl_image_tag @dog.photo, crop: :fill, class:"form-booking-image" %>
-        <div class="form-booking-input">
-          <%= render 'form', booking: @booking %>
-        </div>
+<div class="card-category">
+  <div class="form-booking-container box">
+    <h1 class='title py-4'>Booking with <span class='booked-dog'><%= @dog.name %></span></h1>
+    <div class="d-flex justify-content-around">
+      <%= cl_image_tag @dog.photo, crop: :fill, class:"form-booking-image" %>
+      <div class="form-booking-input">
+        <%= render 'form', booking: @booking, dog: @dog, dates: @dates.to_json %>
       </div>
+    </div>
 
-      <div class="text-right p-3">
-        <%= link_to 'Cancel', dog_path(@dog) %>
-      </div>
+    <div class="text-right p-3">
+      <%= link_to 'Cancel', dog_path(@dog) %>
     </div>
   </div>
 </div>
+
 
 
