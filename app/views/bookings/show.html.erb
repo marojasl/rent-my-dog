@@ -1,3 +1,26 @@
-Your booking is confirmed!
 
-<%= link_to "See all my bookings", user_path(@user)%>
+<div class="container ml-3">
+  <div class="confirmation">
+
+      <h2 class="text-center">Congratulations! <%=current_user.first_name %>  </h2>
+
+      <h2 class="text-center">Your booking request has been confirmed</h2>
+    <div class="row">
+
+      <div class="col">
+        <%= cl_image_tag @booking.dog.photo%>
+      </div>
+
+      <div class="col">
+        <h3>Name: <%= @booking.dog.name %></h3>
+        <h3>Breed: <%= @booking.dog.breed %></h3>
+        <h3>Booking details: <%= @booking.start_date %> <%= @booking.end_date %></h3>
+      </div>
+    </div>
+
+      <%= link_to user_path(@user), class:"link-text" do %>
+        <div class="btn-treehouse">See all my bookings</div>
+      <% end %>
+
+  </div>
+</div>

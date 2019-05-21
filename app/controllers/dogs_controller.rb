@@ -6,11 +6,17 @@ class DogsController < ApplicationController
   def index
     @dogs = policy_scope(Dog)
 
-    if params[:postcode].present?
-      @dogs = Dog.near(params[:postcode], 10)
+    if params[:query].present?
+      @dogs = Dog.search_by_breed_name_address(params[:query])
     else
-      @dogs = Dog.where.not(latitude: nil, longitude: nil)
+      @dogs = Dog.all
     end
+
+    # if params[:postcode].present?
+    #   @dogs = Dog.near(params[:postcode], 10)
+    # else
+    #   @dogs = Dog.where.not(latitude: nil, longitude: nil)
+    # end
 
     @markers = @dogs.map do |dog|
       {
