@@ -4,6 +4,7 @@
     <div class="cards-map-box d-flex justify-content-between">
       <div style="width: 60%">
       <h1 class="p-4 text-center">Find a friend</h1>
+      <%= render "/pages/search-bar"%>
       <div class="cards">
         <% @dogs.each do |dog| %>
           <div class="card-dog m-3">
@@ -29,8 +30,8 @@
         height: 100vh;"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      <%#= render "/pages/search-form"%>
       >
-        <%= render "/pages/search-form"%>
       </div>
     </div>
   <!-- </div> -->

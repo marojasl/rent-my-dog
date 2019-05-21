@@ -2,6 +2,8 @@
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
-    placeholder: "Find a dog"
+    placeholder: "Search"
   %>
+  <%= range_field_tag "range", 0, id: 'range' %>
 <% end %>
+
