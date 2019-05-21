@@ -29,6 +29,7 @@ class DogsController < ApplicationController
   end
 
   def show
+    @chatroom = Chatroom.new
   end
 
   def new
