@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   resources :dogs do
     resources :bookings, only: [:new, :create]
   end
-  resources :bookings, only: [:show, :destroy]
+  resources :bookings, only: [:show, :destroy] do
+    resources :payments, only: [:new, :create]
+  end
   resources :chatrooms, only: [:show, :create] do
     resources :messages, only: [:create]
   end

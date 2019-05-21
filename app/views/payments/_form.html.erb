@@ -1,7 +1,8 @@
-<%= simple_form_for [dog, booking], html: { data: { dates: dates }} do |f| %>
+<%= simple_form_for [@booking, @payment] do |f| %>
 
   <div class="form-inputs">
-    <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
   </div>
 
   <div class="form-inputs">
