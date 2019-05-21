@@ -22,5 +22,8 @@
     </div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+    <% if params[:controller] == "bookings" && params[:action] == "new" %>
+      <%= javascript_pack_tag 'flatpickr' %>
+    <% end %>
   </body>
 </html>
