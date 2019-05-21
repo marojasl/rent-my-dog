@@ -5,8 +5,6 @@ base-font = #fff
 */
 
 .navbar-lewagon {
-  position: fixed;
-  top: 0;
   justify-content: space-between;
   padding: 10px 50px;
   width: 100%;
@@ -30,6 +28,7 @@ base-font = #fff
   bottom: 9px;
 }
 #navbar-brand {
+  font-family: Fredoka One, Helvetica, sans-serif;
   letter-spacing: 9px;
   padding-top: 12px;
   font-size: 30px;

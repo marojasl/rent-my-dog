@@ -2,29 +2,33 @@
 
  <div class="d-flex align-items-start main-brand">
 
+    <span class= "navbar-link">
+    <%= link_to dogs_path do %>
+       <%= image_tag "https://image.flaticon.com/icons/svg/620/620851.svg", id: "logo-navbar" %>
+    <% end %>
+    </span>
+
+
    <span id="navbar-brand">
-    <div class="row">
-      <i class="fas fa-bone" style="font-size: 1.8em"></i>
-      <h2 class="fedoka"> Rent My Dog</h2>
-    </div>
+    <h2> Rent My Dog</h2>
    </span>
 
   </div>
+
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
           <% if policy(Dog).create? %>
             <%= link_to new_dog_path, class:"nav-link" do %>
-            <!--   <p class= "add-dog"><i class="fas fa-plus"></i> Add your dog</p> -->
-              <button type="button" class="btn btn-outline-light fas fa-plus"> Add your dog</button>
+              <p class= "add-dog"><i class="fas fa-plus"></i> Add your dog</p>
             <% end %>
           <% end %>
         </li>
-
-        <li>
+        <li class="nav-item add-dog">
           <%= link_to "Messages", "#", class: "nav-link" %>
-
+        </li>
         <li class="nav-item dropdown">
 
           <% if current_user.photo? %>
@@ -39,23 +43,9 @@
           </div>
         </li>
       <% else %>
-
-        <div class="d-flex justify-content-end">
-
-          <li class="nav-item">
-           <%= link_to dogs_path, class:"link-text" do %>
-           <div class="nav-text"> See our adorable dogs</div>
-           <% end %>
-          </li>
-
-
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-text" %>
-          </li>
-        </div>
-
-
-
+        <li class="nav-item">
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        </li>
       <% end %>
     </ul>
   </div>
