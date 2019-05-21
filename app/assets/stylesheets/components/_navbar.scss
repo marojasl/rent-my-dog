@@ -1,8 +1,17 @@
+
+/*
+navbar -color = #D65D17
+base-font = #fff
+*/
+
 .navbar-lewagon {
+  position: fixed;
+  top: 0;
   justify-content: space-between;
   padding: 10px 50px;
-  background: #FF7A02;
-  background-image: linear-gradient(to right, #FF7010, #FFD50B);
+  width: 100%;
+
+  // background-image: linear-gradient(to right, #FF7010, #FFD50B);
   opacity: 0.9;
 }
 
@@ -14,16 +23,31 @@
   width: 40px;
 }
 
-#logo-navbar {
-  width: 50px;
-  height: 50px;
+.fedoka {
+  font-family: Fredoka One, Helvetica, sans-serif;
+  position: absolute;
+  left: 130px;
+  bottom: 9px;
 }
-
 #navbar-brand {
-  letter-spacing: 20px;
-  padding-top: 13px;
-  font-size: 22px;
+  letter-spacing: 9px;
+  padding-top: 12px;
+  font-size: 30px;
+  color: #FFF;
+  opacity: .8;
 }
 .add-dog {
-  color: #74736e;
+  color: #FFF;
 }
+
+.nav-item{
+  margin: 0 15px;
+  letter-spacing: 2px;
+  opacity: .7;
+}
+.nav-text{
+  font-family: Fredoka One, Helvetica, sans-serif;
+  color: #FFF;
+}
+
+
