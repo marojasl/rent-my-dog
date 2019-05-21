@@ -34,3 +34,19 @@
   margin-top: 25px;
 
 }
+
+.btn-orange-border {
+  font-family: Raleway, Helvetica, sans-serif;
+  border: 0.5mm solid #FF751A ;
+  font-weight: lighter;
+  border-radius: 18px;
+  text-align: none;
+  padding: 16px 20px;
+  transition: .2s;
+  color: #FF751A;
+}
+
+.btn-orange-border:hover {
+  color: #f9ae2c;
+  border: 0.5mm solid #f9ae2c;
+}
