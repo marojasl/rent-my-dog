@@ -1,5 +1,5 @@
 .btn-treehouse {
-  font-family: Fredoka One, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #FF751A;
   font-weight: bold;
   border-radius: 10px;
@@ -14,7 +14,6 @@
   margin-top: 1rem;
   position: relative;
   letter-spacing: 4px;
-
 }
 
 .btn-treehouse:hover{
@@ -30,13 +29,8 @@
   box-shadow: 1px 5px 10px rgba(0,0,0,0.2);
 }
 
-.btn-signin{
-  margin-top: 25px;
-
-}
-
 .btn-orange-border {
-  font-family: Raleway, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   border: 0.5mm solid #FF751A ;
   font-weight: lighter;
   border-radius: 18px;
@@ -50,3 +44,19 @@
   color: #f9ae2c;
   border: 0.5mm solid #f9ae2c;
 }
+
+.btn-signin{
+  position: absolute;
+  top: 40px;
+}
+
+.button-owner {
+  position: absolute;
+  left: 30px;
+}
+.button-user{
+  position: absolute;
+  left: 400px;
+}
+
+

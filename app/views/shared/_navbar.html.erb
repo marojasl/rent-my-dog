@@ -1,20 +1,15 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<% color = params[:controller] == 'pages' && params[:action] == 'home' ? 'transparent' : '#fd751a' %>
+<% position = params[:controller] == 'pages' && params[:action] == 'home' ? 'absolute' : 'initial' %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon" style="background-color: <%= color %>; position: <%= position %>;">
 
  <div class="d-flex align-items-start main-brand">
-
-    <span class= "navbar-link">
-    <%= link_to dogs_path do %>
-       <%= image_tag "https://image.flaticon.com/icons/svg/620/620851.svg", id: "logo-navbar" %>
-    <% end %>
-    </span>
-
-
-   <span id="navbar-brand">
-    <h2> Rent My Dog</h2>
-   </span>
-
-  </div>
-
+   <div class="navbar-brand">
+      <div class="d-flex justify-content-start">
+        <i class="fas fa-bone brand" style="font-size: 2em; color: #FFF"></i>
+        <p class= "logo">Rent My Dog</p>
+           </div>
+      </div>
+ </div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -43,9 +38,11 @@
           </div>
         </li>
       <% else %>
+
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <%= link_to "Login", new_user_session_path, class: "nav-link", style: "color: white" %>
         </li>
+
       <% end %>
     </ul>
   </div>
