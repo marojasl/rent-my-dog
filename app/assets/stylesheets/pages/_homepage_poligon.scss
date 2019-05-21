@@ -10,25 +10,27 @@
 
 .poligon {
   background-color: #ffe7d1;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
   opacity: 0.5;
-  width: 583px;
-  height: 316px;
+  width: 550px;
+  height: 300px;
   // -webkit-clip-path: polygon(15% 0, 100% 0, 83% 100%, 0 100%);
   // clip-path: polygon(15% 0, 100% 0, 83% 100%, 0 100%);
   position: absolute;
   margin-top: 47px;
+  text-align: center;
+  border-radius: 25px;
 
 }
 
   .beige {
-      bottom: -106px;
-      left: 444px;
+      z-index: 3;
+      bottom: -90px;
+      left: 400px;
 
       p {
 
-      padding: 86px;
-
+      padding: 20px;
 
       }
 
@@ -37,13 +39,26 @@
 
   .orange {
 
-    background: #FF7010;
-    z-index: 3;
-    right: -96px;
+    right: -80px;
 
     p {
 
-      padding: 86px;
+      padding: 50px;
+      opacity: 1;
+      color: #FF751A;
+
+      }
+
+
+  }
+
+  .orange_2 {
+
+    left: 725px;
+
+    p {
+
+      padding: 50px;
       opacity: 1;
 
       }

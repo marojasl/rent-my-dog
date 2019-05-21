@@ -1,37 +1,50 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/850602/pexels-photo-850602.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1520580413066-ac45756bdc71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);">
   <div class="container">
-    <h1>Share<strong> the love</strong> of<strong> Dogs</strong>!</h1>
-    <p>Connecting dog owners with local dog borrowers for walks, weekends and holidays</p>
-    <br>
-    <% if user_signed_in? %>
-      <div>
+   <div class="banner-text">
+     <h1>Share<strong> the love</strong> of<strong> Dogs</strong>!</h1>
+      <p>Connecting dog owners with local dog borrowers for walks, weekends and holidays</p>
+      <br>
+      <br>
+      <br>
+
+
+   </div>
+  </div>
+</div>
+
+<!--  <buttons> -->
+
+<div class = "btn-signin">
+  <% if user_signed_in? %>
+    <div>
+     <div class= "d-flex justify-content-center mx-3">
         <div class="button-owner">
-          <%= link_to dogs_path, class:"link-text" do %>
-          <div class="btn-treehouse"> See our adorable dogs!</div>
+         <%= link_to dogs_path, class:"link-text" do %>
+        <div class="btn-treehouse"> See our adorable dogs!</div>
          <% end %>
-       </div>
-      </div>
+        </div>
+     </div>
+    </div>
 
-    <% else %>
+  <% else %>
+
+    <div class="btn-signin">
       <div class="d-flex justify-content-center mx-3">
-
        <div class="button-owner">
         <%= link_to new_user_session_path, class:"link-text" do %>
-           <div class="btn-treehouse"> Get started as an owner </div>
-         <% end %>
-       </div>
-
-        <div class="button-user">
-          <%= link_to new_user_session_path, class:"link-text" do %>
-            <div class="btn-treehouse">
-              Get started as an borrower
-            </div>
-          <% end %>
+          <div class="btn-treehouse"> Get started as an owner </div>
+        <% end %>
         </div>
+        <div class="button-user">
+        <%= link_to new_user_session_path, class:"link-text" do %>
+         <div class="btn-treehouse">Get started as an borrower</div>
+        <% end %>
+        </div>
+       </div>
       </div>
     <% end %>
   </div>
-</div>
+
  <div class="dog-prints">
   <!-- <div class="container text-center"> -->
    <div class="stories-body">
@@ -76,18 +89,25 @@
   <div class="square-container">
 
     <div class="poligon beige">
-
+      <br>
+      <i class="fas fa-bone" style="font-size: 4em"></i>
       <p> Rent my Dog connects dog owners with trusted local people who would love to look after their dog. We make it easy to arrange walks, playtime, overnight stays or holidays. Our aim is to help dog owners when they need it, give dogs more exercise and playtime and to allow people without a dog to spend quality time with one. We call it a win-win (or a woof-­woof) situation for everyone involved.</p>
 
     </div>
 
-    <div class="poligon orange">
-      <p>Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur eos ex. Nec labore aliquando id, ex vel altera nostrud, postulant vulputate qui ad. Ne mei eius idque nusquam, ne pri quod oblique. Et audire aliquip</p>
+      <div class="poligon orange">
+        <br>
+        <i class="fas fa-dog" style="font-size: 5em"></i>
+        <p>Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur eos ex. Nec labore aliquando id, ex vel altera nostrud, postulant vulputate qui ad. Ne mei eius idque nusquam, ne pri quod oblique. Et audire aliquip</p>
+      </div>
 
-    </div>
+       <div class="poligon orange_2">
+        <br>
+        <i class="fas fa-paw" style="font-size: 4em"></i>
+        <p>Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur eos ex. Nec labore aliquando id, ex vel altera nostrud, postulant vulputate qui ad. Ne mei eius idque nusquam, ne pri quod oblique. Et audire aliquip</p>
+      </div>
 
   </div>
-
 
   <div class="orange-font">
    <!--  <div class="container text-center"> -->
