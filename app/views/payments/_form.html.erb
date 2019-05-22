@@ -2,23 +2,23 @@
     <%= simple_form_for [@booking, @payment] do |f| %>
 
     <div class="form-inputs">
-      <%= f.input :name_card %>
+      <%= f.input :name_card, label: "Card Holder's Name" %>
     </div>
 
     <div class="form-inputs">
-      <%= f.input :cc_number %>
+      <%= f.input :cc_number,label: "Credit Card Number" %>
     </div>
 
     <div class="form-inputs">
-      <%= f.input :expiry_date %>
+      <%= f.input :expiry_date, label: "Expiry Date" %>
     </div>
 
     <div class="form-inputs">
-      <%= f.input :cvc %>
+      <%= f.input :cvc, label: "CVC/CVV" %>
     </div>
 
     <div class="form-inputs">
-      <%= f.input :address_card %>
+      <%= f.input :address_card,label: "Address"%>
     </div>
 
 
