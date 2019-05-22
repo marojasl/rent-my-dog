@@ -45,6 +45,7 @@ class DogsController < ApplicationController
   def new
     @dog = Dog.new
     @booking = Booking.new
+    authorize @dog
   end
 
   def create
