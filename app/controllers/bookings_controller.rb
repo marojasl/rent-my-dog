@@ -8,6 +8,7 @@ class BookingsController < ApplicationController
   def new
     @booking = Booking.new
     @dog = Dog.find(params[:dog_id])
+    @booking.dog = @dog
     @dates = @dog.bookings.map do |booking|
       { from: booking.start_date.strftime("%Y-%m-%e").gsub(' ', '0'), to: booking.end_date.strftime("%Y-%m-%e").gsub(' ', '0') }
     end
