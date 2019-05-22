@@ -2,21 +2,22 @@
   height: 400px;
   width: 700px;
   padding-top: 15px;
-  background-color: rgba(0,0,0,0.55);
+  background-color: rgba(255, 230, 208, 0.4);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
   border-radius: 15px;
   border-color:#d2d2d2;
   position: relative;
 
     h2 {
-      color: white;
+      color: #FF751A;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     }
 }
 
 
 .confirmation h3 {
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    color: #FF751A;
+    // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     font-size: 18px;
     margin-right: 8rem;
     margin-top: 2rem;
@@ -27,7 +28,7 @@
 .confirmation img {
   width: 200px;
   height: 200px;
-  border: 0.5px solid rgba(0, 0, 0, 0.4);
+  border: 0.5px solid rgba(255, 230, 208, 1);
   border-width: 2px;
   border-radius: 5px;
   margin-left: 8rem;
@@ -39,7 +40,7 @@
 
 .confirmation .btn-treehouse {
   position:absolute;
-  bottom: 8px;
-  right: 118px;
+  bottom: 24px;
+  right: 132px;
 }
 

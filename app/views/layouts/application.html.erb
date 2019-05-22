@@ -10,11 +10,7 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %>
   </head>
   <body>
-    <% if current_page?('/') %>
-      <%= render 'shared/home_navbar' %>
-    <% else %>
-
-    <% end %>
+    <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <div style="min-height: calc(100vh - 163.97px)">
       <%= yield %>

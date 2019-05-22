@@ -7,9 +7,6 @@
       <br>
       <br>
       <br>
-   </div>
-  </div>
-</div>
 
 <!--  <buttons> -->
 
@@ -26,23 +23,29 @@
     </div>
 
   <% else %>
-
     <div class="btn-signin">
-      <div class="d-flex justify-content-center mx-3">
+
+      <div class="d-flex justify-content-center mx-2">
+
        <div class="button-owner">
         <%= link_to new_user_session_path, class:"link-text" do %>
           <div class="btn-treehouse"> Get started as an owner </div>
         <% end %>
         </div>
+
         <div class="button-user">
         <%= link_to new_user_session_path, class:"link-text" do %>
-         <div class="btn-treehouse">Get started as an borrower</div>
+          <div class="btn-treehouse">Get started as an borrower</div>
         <% end %>
         </div>
+
        </div>
       </div>
     <% end %>
+    </div>
   </div>
+ </div>
+</div>
 
  <div class="dog-prints">
   <!-- <div class="container text-center"> -->
@@ -62,12 +65,13 @@
        </div>
 
       <div class="card-story">
-          <div class="card-product move-left">
-          <img src="https://images.pexels.com/photos/1111028/pexels-photo-1111028.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
-          <div class="card-product-infos">
-            <h2>Product name</h2>
-            <p> "Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur only"</p>
-          </div>
+          <div class="card-product move-left" style="display: flex;
+          justify-content: flex-end;">
+           <div class="card-product-infos" style="text-align: right;">
+              <h2>Product name</h2>
+              <p> "Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur only"</p>
+            </div>
+            <img src="https://images.pexels.com/photos/1111028/pexels-photo-1111028.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
         </div>
       </div>
 

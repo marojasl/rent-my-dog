@@ -16,5 +16,13 @@
    background-color: rgba(255, 231, 209, 0.7);
    opacity: 0.5;
    border-radius: 15px;
+   position: relative;
 
+}
+
+.new-dog-input .btn-treehouse {
+  width: 100px;
+  position: absolute;
+  left: 160px;
+  bottom: -278px;
 }

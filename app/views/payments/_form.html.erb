@@ -1,0 +1,26 @@
+<%= simple_form_for [@booking, @payment] do |f| %>
+
+  <div class="form-inputs">
+    <%= f.input :name_card %>
+  </div>
+
+  <div class="form-inputs">
+    <%= f.input :cc_number %>
+  </div>
+
+  <div class="form-inputs">
+    <%= f.input :expiry_date %>
+  </div>
+
+  <div class="form-inputs">
+    <%= f.input :cvc %>
+  </div>
+
+  <div class="form-inputs">
+    <%= f.input :address_card %>
+  </div>
+
+  <div class="form-actions btn btn-treehouse">
+    <%= f.button :submit, 'Confirm to pay' %>
+  </div>
+<% end %>
