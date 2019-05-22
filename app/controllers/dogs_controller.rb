@@ -6,8 +6,15 @@ class DogsController < ApplicationController
   def index
     @dogs = policy_scope(Dog)
 
-    if params[:query].present?
+    if params[:query].present? && params[:lower_price].present?
       @dogs = Dog.search_by_breed_name_address(params[:query])
+      @dogs = @dogs.select do |dog|
+                dog.rate >= params[:lower_price].to_i && dog.rate <= params[:upper_price].to_i
+              end
+    elsif params[:lower_price].present?
+      @dogs = Dog.all.select do |dog|
+                dog.rate >= params[:lower_price].to_i && dog.rate <= params[:upper_price].to_i
+              end
     else
       @dogs = Dog.all
     end

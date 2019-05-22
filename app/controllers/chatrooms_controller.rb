@@ -7,10 +7,12 @@ class ChatroomsController < ApplicationController
   end
 
   def create
-    # receiver = User.find(params[:receiver_id])
-    # if Chatroom.where(sender: current_user, receiver: receiver)
-    #   redirect_to chatroom_path(Chatroom.where(sender: current_user, receiver: receiver))
-    # else
+    receiver = User.find(params[:receiver_id])
+    chatroom = Chatroom.find_by(sender: current_user, receiver: receiver)
+    if chatroom
+      authorize chatroom
+      redirect_to chatroom_path(chatroom)
+    else
       @chatroom = Chatroom.new(chatroom_params)
       @chatroom.sender = current_user
       authorize @chatroom
@@ -19,7 +21,7 @@ class ChatroomsController < ApplicationController
       else
         render 'dogs/show'
       end
-    # end
+    end
   end
 
   private

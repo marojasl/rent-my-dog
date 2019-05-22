@@ -21,5 +21,8 @@
     <% if params[:controller] == "bookings" && params[:action] == "new" %>
       <%= javascript_pack_tag 'flatpickr' %>
     <% end %>
+    <% if params[:controller] == "dogs" && params[:action] == "index" %>
+      <%= javascript_pack_tag 'search' %>
+    <% end %>
   </body>
 </html>
