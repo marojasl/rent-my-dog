@@ -2,8 +2,8 @@ import 'nouislider';
 
 const slider = () => {
   var snapSlider = document.getElementById('range');
-
-  noUiSlider.create(snapSlider, {
+  if (snapSlider) {
+    noUiSlider.create(snapSlider, {
       start: [0, 1000],
       snap: true,
       connect: true,
@@ -21,7 +21,8 @@ const slider = () => {
           '90%': 900,
           'max': 1000
       }
-  });
+    });
+  };
 
   // var snapValues = [
   //   document.getElementById('slider-snap-value-lower'),

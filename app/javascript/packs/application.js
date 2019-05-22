@@ -4,6 +4,6 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import 'nouislider/distribute/nouislider.css';
 import { slider } from '../plugins/init_slider';
 import { initMapbox } from '../plugins/init_mapbox';
-
+import "flatpickr/dist/themes/confetti.css";
 slider();
 initMapbox();
