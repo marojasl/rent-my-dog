@@ -1,5 +1,5 @@
 import flatpickr from "flatpickr"
-import "flatpickr/dist/themes/airbnb.css" // Note this is important!
+import "flatpickr/dist/themes/confetti.css" // Note this is important!
 import rangePlugin from "flatpickr/dist/plugins/rangePlugin.js"
 
 const form = document.getElementById('new_booking');
