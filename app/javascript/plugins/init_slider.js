@@ -1,5 +1,4 @@
 import 'nouislider';
-import 'nouislider/distribute/nouislider.css';
 
 const slider = () => {
   var snapSlider = document.getElementById('range');
