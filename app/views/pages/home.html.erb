@@ -2,6 +2,7 @@
   <div class="container">
 
    <div class="banner-text">
+
      <h1>Share<strong> the love</strong> of<strong> Dogs</strong>!</h1>
       <p>Connecting dog owners with local dog borrowers for walks, weekends and holidays</p>
       <br>
@@ -14,9 +15,9 @@
   <% if user_signed_in? %>
     <div>
      <div class= "d-flex justify-content-center mx-3">
-        <div class="button-owner">
+        <div class="button-alldogs">
          <%= link_to dogs_path, class:"link-text" do %>
-        <div class="btn-treehouse"> See our adorable dogs!</div>
+        <div class="btn-treehouse">See our adorable dogs!</div>
          <% end %>
         </div>
      </div>
@@ -25,17 +26,18 @@
   <% else %>
     <div class="btn-signin">
 
-      <div class="d-flex justify-content-center mx-2">
+      <div class="d-flex justify-content-center mx-3">
 
        <div class="button-owner">
         <%= link_to new_user_session_path, class:"link-text" do %>
-          <div class="btn-treehouse"> Get started as an owner </div>
+          <div class="btn-treehouse"><i class="fas fa-dog" style="font-size: 1em"></i> Owner </div>
+
         <% end %>
         </div>
 
         <div class="button-user">
-        <%= link_to new_user_session_path, class:"link-text" do %>
-          <div class="btn-treehouse">Get started as an borrower</div>
+        <%= link_to dogs_path, class:"link-text" do %>
+          <div class="btn-treehouse"><i class="fas fa-paw" style="font-size: 1em"></i> Borrower</div>
         <% end %>
         </div>
 
@@ -52,14 +54,16 @@
    <div class="stories-body">
 
       <div class="center-part">
-         <h2 class="text-center"><strong>Our stories</strong></h2>
+        <br>
 
+        <h2 class="text-center"><strong>Our stories</strong></h2>
+        <br>
        <div class="card-story">
          <div class="card-product move-right">
            <img src="https://images.unsplash.com/photo-1535812859-6bfd2f132e78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60">
            <div class="card-product-infos">
-             <h2>Product name</h2>
-             <p>" Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur eosonly.</p>
+             <h2>Charlie's Story</h2>
+             <p>"You pay your subscription to BorrowMyDoggy, but the money that you’d actually spend, you would save if you had to pay for a dog walker. - <strong> Charlie the Cavapoo from London</strong>"</p>
            </div>
          </div>
        </div>
@@ -68,8 +72,8 @@
           <div class="card-product move-left" style="display: flex;
           justify-content: flex-end;">
            <div class="card-product-infos" style="text-align: right;">
-              <h2>Product name</h2>
-              <p> "Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur only"</p>
+              <h2>Bertie's Story</h2>
+              <p> "I was really worried about what being home alone was going to be like for him. BorrowMyDoggy has added so much to his life and he’s like a puppy again. - <strong> Bertie the Labrador from London </strong>"</p>
             </div>
             <img src="https://images.pexels.com/photos/1111028/pexels-photo-1111028.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
         </div>
@@ -79,8 +83,8 @@
          <div class="card-product move-right">
           <img src="https://images.pexels.com/photos/341378/pexels-photo-341378.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
           <div class="card-product-infos">
-            <h2>Product name</h2>
-            <p>"Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur only.</p>
+            <h2>Roxy's Story</h2>
+            <p>"When we first got Roxy we used a dog-sitter, but something was missing and it was expensive. Then I heard of BorrowMyDoggy and we tried it out, it’s incredible!.<strong> Roxy the Cockapoo from London</strong></p>
           </div>
         </div>
       </div>
@@ -100,41 +104,43 @@
 
       <div class="poligon orange">
         <br>
-        <i class="fas fa-dog" style="font-size: 5em"></i>
-        <p>Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur eos ex. Nec labore aliquando id, ex vel altera nostrud, postulant vulputate qui ad. Ne mei eius idque nusquam, ne pri quod oblique. Et audire aliquip</p>
+        <i class="fas fa-dog" style="font-size: 4em"></i>
+        <p> Connects dog owners with trusted local people who would love to look after their dog. We make it easy to arrange walks, playtime, overnight stays or holidays. Our aim is to help dog owners when they need it, give dogs more exercise and playtime and to allow people without a dog to spend quality time with one. We call it a win-win (or a woof-­woof) situation for everyone involved.</p>
       </div>
 
        <div class="poligon orange_2">
         <br>
         <i class="fas fa-paw" style="font-size: 4em"></i>
-        <p>Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur eos ex. Nec labore aliquando id, ex vel altera nostrud, postulant vulputate qui ad. Ne mei eius idque nusquam, ne pri quod oblique. Et audire aliquip</p>
+        <p>As founding members of the Animal Consultants and Trainers Association (ACTA), we continue to pioneer animal welfare standards in our industry. Our impeccable reputation for animal welfare provides our clients peace of mind that their brand reputation will be protected and enhanced by the procurement of animal content services delivered by A-Z Animals.</p>
       </div>
 
   </div>
 
+<div class = "footer-card">
   <div class="orange-font">
    <!--  <div class="container text-center"> -->
       <br>
       <h3 class="text-center">Why use our service</h3>
       <div class="row mt-3">
           <div class="col text-center">
-            <i class="fas fa-shield-alt" style="font-size: 2.73em; color: #FF7010;"></i>
+            <i class="fas fa-shield-alt" style="font-size: 2.73em; color: #FFF;"></i>
             <h3 class="text-center">Safety</h3>
             <p>Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur eos ex. Nec labore aliquando id, ex vel altera nostrud, postulant vulputate qui ad. Ne mei eius idque nusquam, ne pri quod oblique. Et audire aliquip volutpat vix.</p>
           </div>
 
           <div class="col text-center">
-            <i class="fas fa-users" style="font-size: 2.73em; color: #FF7010;"></i>
+            <i class="fas fa-users" style="font-size: 2.73em; color: #FFF;"></i>
             <h3>Community</h3>
             <p>Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur eos ex. Nec labore aliquando id, ex vel altera nostrud, postulant vulputate qui ad. Ne mei eius idque nusquam, ne pri quod oblique. Et audire aliquip volutpat vix.</p>
           </div>
 
           <div class="col text-center">
-            <i class="far fa-heart" style="font-size: 2.73em; color: #FF7010;"></i>
+            <i class="far fa-heart" style="font-size: 2.73em; color: #FFF;"></i>
             <h3 class="text-center">Feel</h3>
             <p>Lorem ipsum dolor sit amet, in ius errem aperiam, te adipisci referrentur mel. Liber vidisse has no, idque everti omittantur eos ex. Nec labore aliquando id, ex vel altera nostrud, postulant vulputate qui ad. Ne mei eius idque nusquam, ne pri quod oblique. Et audire aliquip volutpat vix.</p>
           </div>
       </div>
+</div>
   <!--   </div> -->
   </div>
 </div>

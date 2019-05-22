@@ -5,10 +5,12 @@
  <div class="d-flex align-items-start main-brand">
    <div class="navbar-brand">
       <div class="d-flex justify-content-start">
-        <i class="fas fa-bone brand" style="font-size: 2em; color: #FFF"></i>
-        <p class= "logo">Rent My Dog</p>
-           </div>
-      </div>
+        <%= link_to root_path, class:"nav-link" do %>
+         <%= image_tag "dog.png", alt: "Dog Logo", width: 50, height: 50 %>
+         <p class= "logo"> Rent My Dog</p>
+        <% end %>
+        </div>
+    </div>
  </div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -22,7 +24,7 @@
           <% end %>
         </li>
         <li class="nav-item add-dog">
-          <%= link_to "Messages", "#", class: "nav-link" %>
+          <%= link_to "Messages", "#", class: "nav-link", style: "color: white" %>
         </li>
         <li class="nav-item dropdown">
 
@@ -32,9 +34,10 @@
             <%= image_tag "default-user.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Profile", user_path(current_user), class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+              <%= link_to "Profile", user_path(current_user), class: "dropdown-item" %>
+            <div class="dropdown-divider"></div>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            </div>
           </div>
         </li>
       <% else %>

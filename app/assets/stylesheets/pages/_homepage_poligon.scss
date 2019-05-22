@@ -10,7 +10,7 @@
 
 .poligon {
   background-color: #ffe7d1;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   opacity: 0.5;
   width: 550px;
   height: 300px;
@@ -29,7 +29,8 @@
       left: 400px;
 
       p {
-
+      position: absolute;
+      margin-top: -15px;
       padding: 20px;
 
       }
@@ -42,7 +43,8 @@
     right: -80px;
 
     p {
-
+      position: absolute;
+      margin-top: -45px;
       padding: 50px;
       opacity: 1;
       color: #FF751A;
@@ -57,7 +59,8 @@
     left: 725px;
 
     p {
-
+      position: absolute;
+      margin-top: -42.5px;
       padding: 50px;
       opacity: 1;
 
