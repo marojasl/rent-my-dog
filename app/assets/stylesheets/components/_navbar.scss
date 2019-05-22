@@ -4,6 +4,9 @@ navbar -color = #D65D17
 base-font = #fff
 */
 
+.nav-link{
+  color: #fff;
+}
 .navbar-lewagon {
   justify-content: space-between;
   padding: 10px 50px;
@@ -11,6 +14,10 @@ base-font = #fff
 
   // background-image: linear-gradient(to right, #FF7010, #FFD50B);
   opacity: 0.9;
+}
+
+.signin-link{
+  color: #FFF;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -22,17 +29,26 @@ base-font = #fff
 }
 
 .fedoka {
-  font-family: Fredoka One, Helvetica, sans-serif;
+ font-family: 'Roboto', sans-serif;
   position: absolute;
   left: 130px;
   bottom: 9px;
 }
-#navbar-brand {
+
+.navbar-brand{
+position: relative;
+}
+
+.logo {
   font-family: Fredoka One, Helvetica, sans-serif;
   letter-spacing: 9px;
   padding-top: 12px;
-  font-size: 30px;
+  font-size: 32px;
   color: #FFF;
+  opacity: .8;
+  position: absolute;
+  top: -10px;
+  left: 65px;
   opacity: .8;
 }
 .add-dog {
@@ -40,6 +56,7 @@ base-font = #fff
 }
 
 .nav-item{
+  font-family: Fredoka One, Helvetica, sans-serif;
   margin: 0 15px;
   letter-spacing: 2px;
   opacity: .7;

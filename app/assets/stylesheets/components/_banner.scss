@@ -2,17 +2,16 @@
   background-size: cover;
   background-position: center;
   height: 550px;
-  box-shadow: 0px 5px 10px rgba(0,0,0,0.35)
-
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.35);
 }
 
 .banner h1 {
-  font-family: Fredoka One, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   opacity: .6;
   color: #FFF;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 26px;
+  font-size: 30px;
   font-weight: bold;
   letter-spacing: 6px;
   animation-name: moveInLeft;
@@ -21,14 +20,20 @@
 }
 
 .banner p {
-  font-family: Fredoka One, Helvetica, sans-serif;
-  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
   color: #FFF;
   opacity: .6;
    letter-spacing: 2px;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   animation-name: moveInRight;
   animation-duration: 3s;
+}
+
+.banner-text{
+  position: absolute;
+  top: 350px;
+
 }
 
 .link-text:hover {
@@ -72,8 +77,6 @@
   100% {
     opacity: 1;
     transform: translate(0px);
-
-
 
   }
 
