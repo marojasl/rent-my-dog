@@ -1,45 +1,62 @@
-
-
-<div class="show-dog container">
+<div class="card-product-dog">
   <%= cl_image_tag @dog.photo, crop: :fill, class:"dog-image" %>
-  <h1 class='title'><%= @dog.name %></h1>
-  <div class="dog-info">
-    <div class="">
-      <p><strong>Breed: </strong><%= @dog.breed %></p>
-      <p><strong>Address: </strong><%= @dog.address %></p>
-      <p><strong>Age: </strong><%= @dog.age %></p>
-      <p><strong>Description: </strong><%= @dog.description %></p>
-      <p><strong>Price: </strong><%= @dog.rate %> £/day</p>
-      <div class="d-flex"><p><strong>Owner: </strong><%= @dog.user.first_name %> <%= @dog.user.last_name %></p>
-      <%= simple_form_for(@chatroom) do |f| %>
-        <%= hidden_field_tag :receiver_id, @dog.user.id %>
-        <%= button_tag type: 'submit' do %>
-              <i class="far fa-comments"></i>
-          <% end %></div>
+  <div class="card-product-infos">
+    <div class="show-dog">
+      <h1 class='title text-center'><%= @dog.name %></h1>
+      <br>
+      <div class="dog-info">
+        <div class="">
+          <p><strong>Breed: </strong><%= @dog.breed %></p>
+          <p><strong>Address: </strong><%= @dog.address %></p>
+          <p><strong>Age: </strong><%= @dog.age %></p>
+          <p><strong>Description: </strong><%= @dog.description %></p>
+          <p><strong>Price: </strong><%= @dog.rate %> £/day</p>
+          <div class="d-flex"><p class="mr-3"><strong>Owner: </strong><%= @dog.user.first_name %> <%= @dog.user.last_name %></p>
+          <%= simple_form_for(@chatroom) do |f| %>
+            <%= hidden_field_tag :receiver_id, @dog.user.id %>
+            <%= button_tag type: 'submit' do %>
+                  <i class="far fa-comments"></i>
+              <% end %></div>
 
-      <% end %>
+          <% end %>
+        </div>
+      </div>
+      <br>
+
+      <div class="links">
+        <div class="d-flex justify-content-center">
+          <% if policy(@dog).edit? %>
+            <%= link_to edit_dog_path(@dog), class:"link-text" do %>
+            <div class="btn-treehouse btn-booking mr-3"> Update</div>
+            <% end %>
+          <% end %>
+          <% if policy(@dog).destroy? %>
+            <%= link_to dog_path(@dog),  method: :delete, class:"link-text" do %>
+              <div class="btn-treehouse btn-booking"> Delete</div>
+            <% end %>
+          <% end %>
+        </div>
+        <% if policy(@booking).new? %>
+          <%= link_to new_dog_booking_path(@dog), class:"link-text" do %>
+            <div class="btn-treehouse btn-booking"> Book me</div>
+          <% end %>
+          <br>
+          <div class="cancel-link">
+            <%= link_to "Cancel", dogs_path, class:"link-text" %>
+          </div>
+        <% end %>
+
+
+
+
+      </div>
     </div>
   </div>
-
-
-  <div class="links">
-
-    <% if policy(@dog).edit? %>
-      <%= link_to edit_dog_path(@dog), class:"link-text" do %>
-      <div class="btn-treehouse"> Update</div>
-      <% end %>
-    <% end %>
-    <% if policy(@dog).destroy? %>
-      <%= link_to dog_path(@dog),  method: :delete, class:"link-text" do %>
-        <div class="btn-treehouse"> Delete</div>
-      <% end %>
-    <% end %>
-    <%= link_to new_dog_booking_path(@dog), class:"link-text" do %>
-      <div class="btn-treehouse"> Book me</div>
-    <% end %>
-    <%= link_to dogs_path, class:"link-text" do %>
-      <div class="btn-orange-border"> Back</div>
-    <% end %>
-  </div>
 </div>
+
+
+
+
+
+
 

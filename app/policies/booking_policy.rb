@@ -10,7 +10,7 @@ class BookingPolicy < ApplicationPolicy
   end
 
   def new?
-    return true
+    record.dog.user != user
   end
 
   def create?

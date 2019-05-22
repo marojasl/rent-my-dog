@@ -37,11 +37,14 @@ class DogsController < ApplicationController
 
   def show
     @chatroom = Chatroom.new
+    @booking = Booking.new(dog: @dog)
+    authorize @booking
+    authorize @dog
   end
 
   def new
     @dog = Dog.new
-    authorize @dog
+    @booking = Booking.new
   end
 
   def create
