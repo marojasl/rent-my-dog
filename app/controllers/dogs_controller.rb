@@ -11,12 +11,14 @@ class DogsController < ApplicationController
       @dogs = @dogs.select do |dog|
                 dog.rate >= params[:lower_price].to_i && dog.rate <= params[:upper_price].to_i
               end
+      @dogs = @dogs.reject { |d| d.latitude.nil? || d.longitude.nil? }
     elsif params[:lower_price].present?
       @dogs = Dog.all.select do |dog|
                 dog.rate >= params[:lower_price].to_i && dog.rate <= params[:upper_price].to_i
               end
+      @dogs = @dogs.reject { |d| d.latitude.nil? || d.longitude.nil? }
     else
-      @dogs = Dog.all
+      @dogs = Dog.all.reject { |d| d.latitude.nil? || d.longitude.nil? }
     end
 
     # if params[:postcode].present?
