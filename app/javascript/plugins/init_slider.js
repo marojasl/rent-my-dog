@@ -5,7 +5,7 @@ const slider = () => {
   var snapSlider = document.getElementById('range');
 
   noUiSlider.create(snapSlider, {
-      start: [200, 400],
+      start: [0, 1000],
       snap: true,
       connect: true,
       tooltips: true,

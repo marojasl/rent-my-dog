@@ -1,4 +1,6 @@
 <%= form_tag dogs_path, method: :get, class:"ml-3", id: "search-form" do %>
+  <%= hidden_field_tag(:upper_price, 1, id: :upper_price) %>
+  <%= hidden_field_tag(:lower_price, 1, id: :lower_price) %>
   <div class="d-flex align-items-center">
     <label for="search", class="mr-3 font-weight-bold">Search:</label>
     <%= text_field_tag :query,
@@ -14,8 +16,8 @@
   <br>
   <br>
   <div type="text" id="range" class="price-range"></div>
-<!--   <div id="slider-snap-value-lower"></div>
-  <div id="slider-snap-value-upper"></div> -->
+  <div id="slider-snap-value-lower"></div>
+  <div id="slider-snap-value-upper"></div>
   <br>
 <% end %>
 

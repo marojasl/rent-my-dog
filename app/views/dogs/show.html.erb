@@ -9,18 +9,21 @@
       <p><strong>Address: </strong><%= @dog.address %></p>
       <p><strong>Age: </strong><%= @dog.age %></p>
       <p><strong>Description: </strong><%= @dog.description %></p>
-      <p><strong>Price: </strong><%= @dog.rate %> £/day</p>      <p><strong>Owner: </strong><%= @dog.user.first_name %> <%= @dog.user.last_name %></p>
+      <p><strong>Price: </strong><%= @dog.rate %> £/day</p>
+      <div class="d-flex"><p><strong>Owner: </strong><%= @dog.user.first_name %> <%= @dog.user.last_name %></p>
+      <%= simple_form_for(@chatroom) do |f| %>
+        <%= hidden_field_tag :receiver_id, @dog.user.id %>
+        <%= button_tag type: 'submit' do %>
+              <i class="far fa-comments"></i>
+          <% end %></div>
+
+      <% end %>
     </div>
   </div>
 
-  <br>
-  <%= simple_form_for(@chatroom) do |f| %>
-    <%= hidden_field_tag :receiver_id, @dog.user.id %>
-    <%= f.submit "Chat with #{@dog.user.first_name}" %>
-  <% end %>
-  <br>
 
   <div class="links">
+
     <% if policy(@dog).edit? %>
       <%= link_to edit_dog_path(@dog), class:"link-text" do %>
       <div class="btn-treehouse"> Update</div>
@@ -35,7 +38,7 @@
       <div class="btn-treehouse"> Book me</div>
     <% end %>
     <%= link_to dogs_path, class:"link-text" do %>
-      <div class="btn-treehouse"> Back to all dogs</div>
+      <div class="btn-orange-border"> Back</div>
     <% end %>
   </div>
 </div>
