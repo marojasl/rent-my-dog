@@ -3,8 +3,5 @@
   <%= render 'form', dog: @dog %>
 
 
+<div class="btn-cancel"><%= link_to "Cancel", dogs_path(@dog), class:"link-text"%></div>
 
-    <%= link_to dogs_path(@dog), class:"link-text" do %>
-    <div class="btn-treehouse"> Cancel</div>
-    <% end %>
-  </div>

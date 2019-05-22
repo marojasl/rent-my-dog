@@ -14,15 +14,25 @@
 
 .form-styling {
    background-color: rgba(255, 231, 209, 0.7);
+   box-shadow: 0 0 15px rgba(0,0,0,0.3);
    opacity: 0.5;
    border-radius: 15px;
    position: relative;
+   width: 800px;
+   margin-bottom: 20px;
 
 }
 
-.new-dog-input .btn-treehouse {
-  width: 100px;
+.new-dog-input .btn-cancel {
   position: absolute;
-  left: 160px;
-  bottom: -278px;
+  right: 220px;
+  bottom: -347px;
+}
+
+.new-payment .btn-cancel {
+
+  position: absolute;
+  right: 220px;
+  bottom: -186px;
+
 }

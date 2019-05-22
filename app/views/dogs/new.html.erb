@@ -1,9 +1,5 @@
 <div class="new-dog-input">
   <h1 class="text-center" style="color: #FF7010;">Add a new dog!</h1>
     <%= render 'form', dog: @dog %>
-
-
-    <%= link_to dogs_path, class:"link-text justify-content-center" do %>
-    <div class="btn-treehouse"> Cancel</div>
-    <% end %>
-  </div>
+    <div class="btn-cancel"><%= link_to "Cancel", dogs_path, class:"link-text"%></div>
+</div>
