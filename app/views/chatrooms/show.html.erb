@@ -1,37 +1,35 @@
-<div class="container">
+<div class="">
 
-
-<h5>Chat between <%= @chatroom.sender.first_name %> and <%= @chatroom.receiver.first_name %></h5>
-
-<div class="messages", style="overflow: auto; height:500px;" >
-  <div class="header">
-    <%= cl_image_tag @chatroom.sender.photo , class:'avatar' %>
-    <p id="name"><%= @chatroom.sender.first_name %> <%= @chatroom.sender.last_name %><p>
-  </div>
-  <% @messages.each do |message| %>
-    <% sender = current_user == message.user %>
-    <div class="<%= sender ? 'justify-content-end' : 'justify-content-start' %>" style="display: flex;">
-      <div class="message <%= sender ? 'message-right flex-row-reverse' : 'message-left flex-row' %> d-flex justify-content-start align-items-center">
-        <%= cl_image_tag message.user.photo , class:'avatar' %>
-        <p id="text"><%= message.message %></p>
-        <p id="time"><%= Time.new.strftime("%b %e, %l:%M %p") %></p>
+  <div class="chat">
+    <div class="messages", style="overflow: auto; height:500px;" >
+      <div class="header">
+        <%= cl_image_tag @chatroom.sender.photo , class:'avatar' %>
+        <p id="name"><%= @chatroom.sender.first_name %> <%= @chatroom.sender.last_name %><p>
       </div>
+      <% @messages.each do |message| %>
+        <% sender = current_user == message.user %>
+        <div class="<%= sender ? 'justify-content-end' : 'justify-content-start' %>" style="display: flex;">
+          <div class="time-container message <%= sender ? 'message-right flex-row-reverse' : 'message-left flex-row' %> d-flex justify-content-start align-items-center">
+            <%= cl_image_tag message.user.photo , class:'avatar' %>
+            <div class="text-time-wrapper">
+              <p id="text"><%= message.message %></p>
+              <p id="time"><%= message.created_at.strftime("%l:%M %p") %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+
+    <div class="message-box d-flex">
+      <%= simple_form_for([@chatroom, Message.new]) do |f| %>
+        <%= f.submit "Send", class:"send btn btn-treehouse" %>
+        <%= f.input :message, label: false, placeholder:'Type your message', input_html: { class: "full-width" } %>
+      <% end %>
+    </div>
+    <%#= link_to dogs_path(@) %>
+  </div>
 </div>
 
-<div class="message-box">
-  <%= simple_form_for([@chatroom, Message.new]) do |f| %>
-    <%= f.input :message %>
-    <%= f.submit "Send" %>
-  <% end %>
-</div>
 
-</div>
-
-<!-- remove message tag arriba de text box -->
-<!-- make texbox white -->
-<!-- arreglar hora con position relative-->
-<!-- text se sale de mi box -->
 <!-- no manda con enter -->
 <!-- placeholder textbox -->

@@ -1,18 +1,21 @@
 .footer {
-  background: #F4F4F4;
+  // background: #F4F4F4;
+  background-color: #2d2c2c;
+  opacity: 0.8;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 100px;
   padding: 0px 50px;
-  color: rgba(0,0,0,0.3);
+  color: white;
+  // color: rgba(0,0,0,0.3);
 }
 .footer-links {
   display: flex;
   align-items: center;
 }
 .footer-links a {
-  color: black;
+  color: white;
   opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
@@ -21,6 +24,6 @@
 .footer-links a:hover {
   opacity: 1;
 }
-.footer .fas fa-paw {
-  color: #D23333;
+.footer .fas .fa-paw {
+  color: white;
 }
