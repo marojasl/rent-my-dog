@@ -1,9 +1,7 @@
 <div class="ml-3">
   <div class="dog-index", style="background-image: url('<%= asset_url 'dog-index-background.jpg' %>')">
-
-    <!-- <div class="container"> -->
-      <div class="cards-map-box d-flex justify-content-between">
-        <div style="width: 60%">
+    <div class="cards-map-box d-flex justify-content-between">
+      <div style="width: 60%">
         <h1 class="p-4 text-center">Find a friend</h1>
         <br>
         <%= render "/pages/search-bar"%>
@@ -26,17 +24,14 @@
           <% end %>
         </div>
       </div>
-        <div
-          id="map"
-          style="width: 40%;
-          height: 100vh;"
-          data-markers="<%= @markers.to_json %>"
-          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-        <%#= render "/pages/search-form"%>
-        >
-        </div>
+      <div
+        id="map"
+        style="width: 40%;
+        height: 100vh;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      >
       </div>
-    <!-- </div> -->
+    </div>
   </div>
-
 </div>
