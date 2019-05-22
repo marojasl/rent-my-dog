@@ -1,0 +1,10 @@
+<div class="new-payment">
+  <h1 class="text-center" style="color: #FF7010;">Please enter payment details.</h1>
+    <%= render 'form', payment: @payment %>
+
+
+    <%= link_to booking_path(@booking), class:"link-text justify-content-center" do %>
+    <div class="btn-treehouse"> Cancel</div>
+    <% end %>
+  </div>
+

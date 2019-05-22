@@ -22,7 +22,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     authorize @booking
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to new_booking_payment_path(@booking)
     else
       render :new
     end
