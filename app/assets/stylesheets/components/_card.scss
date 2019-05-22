@@ -58,4 +58,34 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.card-profile {
+  text-align: center;
+}
+
+.card-profile li {
+  text-align: left;
+}
+
+.profile-img {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #FC8232;
+  position: relative;
+  left: -4px;
+  border-radius: 10px;
+}
+
+.list-group-flush{
+  margin-top: 45px;
+}
+
+.card-title{
+  letter-spacing: 2px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.welcome-text{
+  font-family: 'Roboto', sans-serif;
+}
+
 
