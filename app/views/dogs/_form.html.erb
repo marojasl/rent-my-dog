@@ -29,10 +29,9 @@
       <%= f.input :photo %>
       <%= f.input :photo_cache, as: :hidden %>
     </div>
-<!--
-    <div class="btn-orange-border"> -->
-      <%= f.button :submit, class:"btn-orange-border" %>
-<!--     </div> -->
-
+    <%= f.button :submit, class:"btn-orange-border" %>
+    <br>
+    <br>
+    <div><%= link_to "Cancel", dogs_path, class:"link-text"%></div>
   <% end  %>
 </div>
